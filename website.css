@@ -1,0 +1,239 @@
+form{
+    box-shadow: 5px 10px 20px;
+    text-align: center;
+    border-radius: 20px 20px;
+    width: 300px;
+    padding: 20px;
+    margin: 20px 20px;
+    height: 400px;
+    float: center;
+    color: black;
+    border: blanchedalmond solid;
+    position: center;
+}
+h1{
+    text-align: center;
+    color:RED;
+    padding-top: 10px;
+    padding-left:10px 10px;
+    font-size: 50px;
+  
+}
+
+.center ,h4{
+    padding: 20px;
+    margin: 20px;
+    font-size: 20px;
+    color:black;
+   
+}
+
+
+footer{
+    text-align: center;
+    color: black;
+    padding: 1rem;
+}
+body{
+    
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+   background-attachment: fixed;
+   background-size: cover;
+   background-position: center;
+ background-color:white;
+  
+}
+input{
+    border-radius: 20px;
+}
+.login
+{
+    font-size: 30px;
+    color: red;
+}
+.lgn{
+    width: 90px;
+    border-radius: 40px;
+}
+.lgn:hover{
+    background-color:brown;
+}
+.navbar li{
+    display: inline;
+    background-color: transparent;
+    padding: 5px;
+   color: red;
+   overflow: hidden;
+   list-style-type: none;
+   margin: 10px;
+   box-sizing: border-box;
+   top: 100px;
+   left: 10px;
+   border-bottom: 1px ;
+   position: sticky;
+   top: 0;
+   border-radius: 50px;
+
+}
+.navbar li:hover{
+    background-color:lightblue;
+    
+    }
+    li a{
+        color: black;
+        text-decoration: none;
+        padding:1px;
+        font-size: 20px;
+    }
+    main{
+        float: left;
+        text-decoration: none;
+        text-align: center;
+    }
+    p{
+        color:black;
+    }
+    .dropbtn {
+        background-color:blue;
+        color: white;
+        padding: 6px;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+        float: right;
+      }
+      
+      .dropdown {
+        position: relative;
+        display: inline-block;
+        
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 100px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+       
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 10px;
+        text-decoration: none;
+        display: block;
+        
+      }
+      .dropdown-content a:hover {background-color: #f1f1f1}
+    
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      .dropdown:hover .dropbtn {
+        background-color:transparent;
+      }
+      .back{
+        top: 12px;
+        float:left;
+        margin: 10px;
+        font-size: 20px;
+        background-color:honeydew;
+    
+      }
+      .bubu{
+        float: left;
+        bottom: 120px;
+        margin:  2px  5px 0px 100px;
+        font-size: 15px;
+        background-color:honeydew;
+        text-decoration:none ;
+        padding:6px;
+        border-radius: 18px;
+        border-color: red;
+        color: red;
+        overflow: hidden;
+        list-style-type: none;
+        width: 150px;
+        height: 30px;
+        text-align: center;
+      }
+      button a{
+        text-decoration: none;
+      }
+      .bubu:hover{
+        background-color:gainsboro;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .card {
+        background: whitesmoke;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 300px;
+        transition: transform 0.2s;
+
+    }
+    .card:hover {
+        transform: scale(1.05);
+    }
+    .card img {
+        width: 50%;
+        height:50%;
+    }
+    .card-content {
+        padding: 15px;
+    }
+    .card-content h3 {
+        margin: 0 0 10px;
+        font-size: 1.5em;
+    }
+    .card-content p {
+        margin: 0 0 15px;
+        color: #666;
+    }
+    .price {
+        font-size: 1.2em;
+        color: #333;
+        margin: 0 0 10px;
+    }
+    .btn {
+        display: inline-block;
+        padding: 10px 15px;
+        background-color: #28a745;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    .btn:hover {
+        background-color: #218838;
+    }
+    .girl{
+      display: inline-block;
+    }
+    .boy{
+      display: inline-block;
+    }
+    .youth{
+      display: inline-block;
+    }
+   .tvss{
+    display: inline-block;
+    position: relative;
+   }
+   
+   .laptoop{
+    display: inline-block;
+   }
+   .desk{
+    display: inline-block;
+   }
+   
