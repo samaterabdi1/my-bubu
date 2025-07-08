@@ -1,32 +1,144 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>website</title>
-        <link rel="stylesheet" href="website.css">
-    </head>
-    
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Nashqadeye Homepage</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
    
-    <body>
-        <header>
-        <nav>
-            <ul class="navbar" >
-                <li><a href="index.html">Home</a></li>
-                <li><a href="contant us.html">contant us</a></li>
-                <li><a href="services.html"> services</a></li>
-                <li><a href="about.html"> abouts</a></li>
-            </ul>
-            </header>
-            <main >
-                <h1> HELLO!!</h1>
-                <h2 style="color: red;">WELCOME TO BUBU SITE</h2>
-                <p class="center">  "At Bubu Shopping Center, we believe that shopping should be a delightful experience.<br> Explore our curated collections of fashion, electronics, and car essentials tailored just for you!"</p>
-                    <button class="bubu"class="back"><a href="login.html">JOIN</a></button>
-            </main>
-            
-          
-          <footer></footer>
-          <script src="website.js"></script>
-    </body>
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      NASHQADLE
+      <div class="circle">HD</div>
+    </div>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav id="navbar">
+      <a href="#hero" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <div class="nav-controls">
+        <button id="themeToggle" onclick="toggleTheme()">🌙</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <h1>Empowering Designers & Developers</h1>
+    <p>Welcome to Nashqadeye — where creativity meets usability. Browse our hand-crafted templates, tools, and learning resources to level up your web projects.</p>
+    <a href="desing.html" class="btn">Get Started</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="card">
+      <img src="is2.jpg" alt="About Us" style="width:100%; height:200px; border-radius:8px; margin-bottom: 1rem;">
+      <h2>About Us</h2>
+      <p>Nashqadeye is a design-driven platform providing tools, templates, and inspiration for developers and designers worldwide. We're passionate about simplicity and great user experience.</p>
+    </div>
+    <div class="card">
+      <img src="is2.jpg" alt="Our Mission" style="width:100%; height:200px; border-radius:8px; margin-bottom: 1rem;">
+      <h2>Our Mission</h2>
+      <p>To make high-quality, responsive web designs accessible to everyone — from beginners to experts. We're committed to open resources and continuous innovation.</p>
+    </div>
+  </section>
+
+  <!-- Services Section with Scroll -->
+  <section id="services" class="footer-section">
+    <h2 style="margin-bottom: 2rem;">What We Offer</h2>
+    <div style="display: flex; gap: 1.5rem; overflow-x: auto; padding-bottom: 1rem;">
+      <div class="about-style">
+        <img src="is2.jpg" alt="Templates" style="width:100%; height:200px; border-radius:8px; margin-bottom: 1rem;">
+        <h2>Templates</h2>
+        <p>Browse a curated selection of professional templates for all project types.</p>
+      </div>
+      <div class="about-style">
+        <img src="is2.jpg" alt="UI Kits" style="width:100%; height:200px; border-radius:8px; margin-bottom: 1rem;">
+        <h2>UI Kits</h2>
+        <p>Ready-to-use UI kits that speed up design and development workflows.</p>
+      </div>
+      <div class="about-style">
+        <img src="is2.jpg" alt="Code Snippets" style="width:100%; height:200px; border-radius:8px; margin-bottom: 1rem;">
+        <h2>Code Snippets</h2>
+        <p>Reusable snippets for HTML, CSS, and JS to boost your coding speed.</p>
+      </div>
+      <div class="about-style">
+        <img src="is2.jpg" alt="Learning" style="width:100%; height:200px; border-radius:8px; margin-bottom: 1rem;">
+        <h2>Learning</h2>
+        <p>In-depth tutorials and documentation to master front-end development.</p>
+      </div>
+      <div class="about-style">
+        <img src="is2.jpg" alt="Tools" style="width:100%; height:200px; border-radius:8px; margin-bottom: 1rem;">
+        <h2>Tools</h2>
+        <p>Handy online tools for color picking, CSS generation, and more.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div>
+      <h3>Links</h3>
+      <p>Home<br>About<br>Shop<br>Contact</p>
+    </div>
+    <div>
+      <h3>More Info</h3>
+      <p>Shipping<br>Returns<br>FAQs<br>Privacy</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p>Email Nashqadle<br>Phone 0636939362<br>Address</p>
+    </div>
+  </footer>
+
+  <div class="footer-bottom">
+    &copy; 2025 Nashqadeye. All rights reserved.
+  </div>
+
+  <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
+  <!-- Scripts -->
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+      document.getElementById('themeToggle').textContent = '☀';
+    }
+
+    function toggleTheme() {
+      const body = document.body;
+      const btn = document.getElementById('themeToggle');
+      const dark = body.classList.toggle('dark-mode');
+      btn.textContent = dark ? '☀' : '🌙';
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    }
+
+    function toggleMenu() {
+      document.getElementById('navbar').classList.toggle('open');
+    }
+
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('scrollTopBtn');
+      btn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('reveal');
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(sec => observer.observe(sec));
+  </script>
+</body>
 </html>

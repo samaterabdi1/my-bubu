@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Templates - Nashqadeye</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      NASHQADLE
+      <div class="circle">HD</div>
+    </div>
+
+   <nav id="navbar">
+      <a href="index.html">Home</a>
+      <div class="nav-controls">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <button id="themeToggle" onclick="toggleTheme()">🌙</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Horizontal Scroll Bar -->
+  <div class="scrollbar-container">
+    <div class="scrollbar-items">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JAVASCRIPT</span>
+      <span>SQL</span>
+      <span>PYTHON</span>
+      <span>JAVA</span>
+      <span>PHP</span>
+      <span>HOW TO</span>
+      <span>W3.CSS</span>
+      <span>C</span>
+      <span>C++</span>
+      <span>C#</span>
+      <span>BOOTSTRAP</span>
+      <span>REACT</span>
+      <span>MYSQL</span>
+      <span>JQUERY</span>
+      <span>EXCEL</span>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 Nashqadeye. All rights reserved.
+  </div>
+
+  <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+      document.getElementById('themeToggle').textContent = '☀';
+    }
+
+    function toggleTheme() {
+      const body = document.body;
+      const btn = document.getElementById('themeToggle');
+      const dark = body.classList.toggle('dark-mode');
+      btn.textContent = dark ? '☀' : '🌙';
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    }
+
+    function toggleMenu() {
+      document.getElementById('navbar').classList.toggle('open');
+    }
+
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('scrollTopBtn');
+      btn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
